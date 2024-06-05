@@ -169,7 +169,7 @@ header{
         transition: var(--transition-2);
     }
 }
-@media screen and (max-width: 448px){
+@media screen and (max-width: 750px){
     .PCheader{
         display: none;
     }
@@ -177,14 +177,14 @@ header{
         display: none;
     }
 }
-@media screen and (min-width: 448px){
+@media screen and (min-width: 750px){
     header{
         .MobHeader{
             display: none;
         }
     }
 }
-@media screen and (width:768px) {
+@media screen and (max-width:830px) {
     header{
         .Lower{
             li{
@@ -194,7 +194,7 @@ header{
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 750px) {
     header{
         .PCheader{
             display: none;

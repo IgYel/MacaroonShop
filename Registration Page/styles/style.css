@@ -568,6 +568,15 @@ main .Info a {
   main .Registration .FormsList li {
     width: 100%;
   }
+  main .Registration .FormsList .password #checkbox {
+    bottom: 14%;
+    scale: 0.8;
+    right: 0%;
+  }
+  main .Registration .FormsList .password input {
+    padding-right: 20%;
+    width: 74%;
+  }
   footer {
     padding: 5%;
   }
