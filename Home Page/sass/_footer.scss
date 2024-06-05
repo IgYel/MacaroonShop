@@ -1,0 +1,181 @@
+footer{
+    margin-top: 100px;
+    display: flex;
+    background-color: var(--FooterColor);
+    padding: 56px 100px 75px 100px;
+    position: relative;
+
+    .FirstBlock{
+        width: 45%;
+        height: 186px;
+        font-size: 12px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            li{
+                width: 30%;
+                span{
+                    text-align: center;
+                    margin-top: 15px;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                img{
+                    height: 38px;
+                }
+            }
+        }
+        .SROInfo{
+            color: #4e4e4e;
+        }
+    }
+    .InfoBlock{
+        flex-wrap: wrap;
+        margin-left: 31px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        li{
+            text-wrap: nowrap;
+            margin: 0px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            span{
+                margin-bottom: 15px;
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .Name{
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+    .Social{
+        display: flex;
+        margin-top: 50px;
+        justify-content: space-between;
+        height: 30px;
+        width: 130px;
+        scale: 1.25;
+        a{
+            height: 20px;
+            width: 20px;
+            background-color: var(--WhiteColor-1);
+            border-radius: 100%;
+            padding: 7px;
+            display: flex;
+            justify-content: center;
+            img{
+                height: 20px;
+                width: 20px;
+                filter: brightness(0.2);
+            }
+            &:hover{
+                background-color: var(--BlueColor-2);
+                transition: var(--transition-2);
+                img{
+                    filter: brightness(1);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px ) {
+    footer{
+        height: 300px;
+        margin: 0px;
+        padding: 3%;
+        .InfoBlock{
+            margin-left: 3%;
+            li{
+                margin: 0;
+                &:first-child{
+                    display: none;
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+                &:nth-child(3){
+                    display: none;
+                }
+            }
+        }
+        .FirstBlock{
+            width: 100%;
+            ul{
+                width: 50%;
+                flex-direction: column;
+                li{
+                    margin-bottom: 10px;
+                    flex-direction: row;
+                    width: 40%;
+                    flex-wrap: wrap;
+                    span{
+                        margin-top: 0px;
+                        margin-left: 10px;
+                        text-align: start;
+                        width: fit-content;
+                        text-wrap: nowrap;
+                        &:last-child{
+                            align-self: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+        .Social{
+            margin-top: 15px;
+        }
+        .SROInfo{
+            position: absolute;
+            bottom: 10px;
+            width: 300px;
+        }
+    }
+}
+@media screen and (max-width: 370px ) {
+    footer{
+        height: 300px;
+        li{
+           font-size: 11px; 
+        }
+        .FirstBlock{
+            li{
+                text-wrap: nowrap;
+                img{
+                   scale: 0.4;
+               }
+            }
+        }
+        @media screen and (max-width: 300px ) {
+            .FirstBlock{
+                width: 45%;
+            }
+            li{
+                width: 30%;
+                height: 100%;
+            }
+            .InfoBlock{
+                text-wrap: wrap;
+                width: 30%;
+                .Social{
+                    width: 20%;
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 500px) {
+    footer{
+        padding: 3%;
+    }
+}

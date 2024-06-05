@@ -1,0 +1,370 @@
+header{
+        .PCheader{
+            color: var(--GrayColor-1);
+            width: 100%;
+            height: 207px;
+            background-color: var(--WhiteColor-1);
+            filter: drop-shadow(0px 3px 3px #1a1a1a63);
+            
+            .Upper{
+                background-color: var(--WhiteColor-2);
+                height: 48px;
+                width: 100%;
+                display: flex;
+                .ButtonBar{
+            width: 50%;
+
+            display: flex;
+            justify-content: space-evenly;
+            li{
+                margin-top: 12px;
+                font-weight: 300;
+                font-size: 17px;
+                border-radius: 7px;
+                padding: 2px 3px;
+                &:hover{
+                    color: var(--BlackColor-1);
+                    transition: var(--transition-1);
+                    height: 20px;
+                    font-weight: 500;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+        .Store{
+            width:  35%;
+            display: flex;
+            justify-content:space-evenly;
+            li{
+                height: 24px;
+                font-size: 17px;
+                text-align: center;
+                margin-top: 10px;
+                display: flex;
+                justify-content: flex-start;
+                padding: 3px;
+                
+                :nth-child(2){
+                    margin: 0px 5px;
+                }
+                :last-child{
+                    height: fit-content;
+                    align-self: center;
+                }
+                &:hover{
+                    transition: var(--transition-1);
+                    font-weight: 500;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+        #StoreBasket{
+            background-color: var(--BlueColor-1);
+            color: var(--GrayColor-1);
+                border-radius: 10px 10px 0px 0px;
+                height: 32px;
+                margin-top: 10px;
+                font-size: 17px;    
+                text-align: center;
+                display: flex;
+                justify-content: flex-start;
+                padding: 3px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    filter: brightness(0.92);
+                }
+                span{
+                    margin-top: 5px;
+                    padding: 0px 5px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-weight: 700;
+                }
+                div{
+                    position: fixed;
+                    
+                    background-color: var(--RedColor-1);
+                    font-weight: 700;
+                    color: var(--WhiteColor-1);
+                    border-radius: 10px;
+                    height: 20px;
+                    width: 20px;
+                    margin: 20px 0px 0px 15px;
+                }
+                
+                &:hover{
+                    color: var(--BlackColor-1);
+                    transition: var(--transition-1);
+                    transform: translateY(-6px);
+                    height: 38px;
+                    color: var(--WhiteColor-4);
+                    img{
+                        transition: var(--transition-1);
+                        filter: brightness(1);
+                    }
+                }
+            }
+        }
+        .Lower{
+        display: flex;
+        justify-content: space-around;
+        .MainLogo{
+            margin-top: 18px;
+        }
+        ul{
+            height: 100%;
+            display: flex;
+            .sale{
+                font-weight: 700;
+                color: var(--WhiteColor-1);
+                border-radius: 20px;
+                padding: 3px 5px;
+                background-color: var(--RedColor-1);
+            }
+            li{
+                font-weight: 500;
+                text-transform: uppercase;
+                margin: 60px 10px 0px 10px;
+                color: var(--GrayColor-1);
+                padding: 5px;
+                &:hover{
+                    transition: ease-in-out 0.5s;
+                    transform: translateY(-3px);
+                    color: var(--BlackColor);
+                    background-color: rgb(231, 233, 235);
+                    border-radius: 10px;
+                }
+            }
+        }
+        }
+    }
+}
+.MainIcons{
+    background-color:var(--BlueColor-2);
+    top: 50px;
+    left: -43px;
+    width: 50px;
+    height: 200px;
+    z-index: 5;
+    border-radius: 0px 25px 25px 0px;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    img{
+        width: 40px;
+        height: 40px;
+        padding: 3px;
+        border-radius: 17px;
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.285);
+                scale: 1.05;
+                transition: ease-in-out 0.2s;
+                transform: rotate(-4deg);
+            }
+        }
+    &:hover{
+        left: 0px;
+        transition: var(--transition-2);
+    }
+}
+@media screen and (max-width: 448px){
+    .PCheader{
+        display: none;
+    }
+    .MainIcons{
+        display: none;
+    }
+}
+@media screen and (min-width: 448px){
+    header{
+        .MobHeader{
+            display: none;
+        }
+    }
+}
+@media screen and (width:768px) {
+    header{
+        .Lower{
+            li{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header{
+        .PCheader{
+            display: none;
+        }
+        .MainIcons{
+            display: none;
+        }
+        width: 100%;
+        .MobHeader{
+            width: 100%;
+            height: 60px;
+            background-color: var(--WhiteColor-2);
+            display: flex;
+            justify-content:space-around;
+            padding: 2px 0;
+            .Logo{
+                margin: 0px;
+                img{
+                    height: 60px;
+                    width: 60px;
+                }
+            }
+            .Menu{
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                span{
+                    height: 4px;
+                    background-color: var(--BlackColor);
+                    border-radius: 5px;
+                    width: 100%;
+                    &:last-child{
+                        width: 80%;
+                    }
+                }
+            }
+            .Basket{
+                height: 60px;
+                width: 60px;
+                position: relative;
+                img{
+                    margin: 10px;
+                    width: 40px;
+                    height: 40px;
+                }
+                .Count{
+                    background-color: var(--RedColor-1);
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    text-align: center;
+                    font-size: 16px;
+                    padding: 3px;
+                    color: var(--WhiteColor-1);
+                    font-weight: 400;
+                    top:40px;
+                    right: 10%;
+                }
+            }
+        }
+    }
+}
+
+.MainIcons{
+    .popup{
+        position: fixed;
+        width: 110%;
+        height: 200%;
+        background-color: rgba(10, 18, 39, 0.514);
+        .popupBody{
+            padding-top: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            .popupClose{
+                padding: 4px;
+                border-radius: 30px;
+                text-align: center;
+                font-size: 40px;
+                width: 50px;
+                height: 50px;
+                background-color: var(--WhiteColor-1);
+                position: absolute;
+                top: -5%;
+                right: -10%;
+            }
+        }        
+    }
+    
+.LoginSection {
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--WhiteColor-2);
+    margin: 12%;
+    width: 76%;
+    height: fit-content;
+    .Login {
+      padding: 5% 20%;
+    }
+    .MainName {
+      text-align: center;
+      font-size: 35px;
+      font-weight: 700;
+    }
+    .FormsList {
+      letter-spacing: 3px;
+      display: flex;
+      flex-direction: column;
+      li {
+        .FormName {
+          margin-left: 2.5%;
+          font-weight: 400;
+          font-size: 23px;
+        }
+        width: 100%;
+        form {
+          width: 100%;
+          input {
+            overflow: hidden;
+            color: var(--BlueColor-2);
+            font-weight: 800;
+            font-size: 20px;
+            width: 80%;
+            padding: 3% 10%;
+            margin: 1% 2.5% 2.5% 2.5%;
+            letter-spacing: 2px;
+            word-spacing: 12px;
+            border-radius: 20px;
+          }
+        }
+      }
+      margin-bottom: 40px;
+    }
+    .LogInSubmit {
+      letter-spacing: 3px;
+      text-align: center;
+      background-color: var(--RedColor-1);
+      margin-left: 2.5%;
+      font-weight: 800;
+      font-size: 20px;
+      width: 80%;
+      padding: 3% 10%;
+      border-radius: 20px;
+      color: var(--WhiteColor-1);
+    }
+    .Text {
+      margin-top: 20px;
+      text-align: center;
+      color: var(--GrayColor-3);
+      font-weight: 600;
+      padding-bottom: 50px;
+      a {
+        color: var(--RedColor-1);
+        font-weight: 800;
+      }
+    }
+}
+.popup{
+    opacity: 0;
+    visibility: hidden;
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    transition: 0.15s ease-in-out;
+}
+}

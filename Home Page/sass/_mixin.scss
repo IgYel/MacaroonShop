@@ -1,0 +1,13 @@
+@mixin CardWrap($ptb, $plr, $radius){
+    padding: $ptb $plr;
+    border-radius: $radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin HeadText($size, $weight, $align){
+    font-size: $size;
+    font-weight: $weight;
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+main{
+  margin: 0;
+  background-color: var(--WhiteColor-3);
+  background-repeat: no-repeat;
+}
+
+#parallax {
+    position: relative;
+    width: 1000px;
+    height: 700px;
+    background-image: url(../images/Macarons3.png), url(../images/Macarons2.png), url(../images/Macarons1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    left: -200px;
+    top: -100px;
+    scale: (0.9);
+}
