@@ -179,7 +179,7 @@ header .PCheader .Lower ul li:hover {
   left: -43px;
   width: 50px;
   height: 200px;
-  z-index: 5;
+  z-index: 15;
   border-radius: 0px 25px 25px 0px;
   position: fixed;
   display: -webkit-box;
@@ -1491,12 +1491,6 @@ main .MainLogoTextMobile .MainImageLogo {
     margin: 50px 20%;
     padding: 10% 5%;
   }
-  .Maps .ButtonMaps #route {
-    display: none;
-  }
-  .Maps .ButtonMaps #pointer {
-    display: none;
-  }
 }
 @media screen and (max-width: 380px) {
   .Maps .ButtonMaps {
@@ -1523,16 +1517,9 @@ main .MainLogoTextMobile .MainImageLogo {
   height: 50px;
   bottom: 75%;
   right: -2%;
-  -webkit-filter: opacity(0);
-          filter: opacity(0);
 }
-.Maps .ButtonMaps #route {
-  width: 75%;
-  height: 100%;
-  bottom: 0;
-  right: 0;
-  -webkit-filter: opacity(0);
-          filter: opacity(0);
+.Maps .ButtonMaps:hover {
+  cursor: url("../../icons/pointercursor.png"), auto;
 }
 .Maps .ButtonMaps:hover #map {
   -webkit-transform: translateY(-20%) translateX(1%) rotate(-5deg);
@@ -1541,12 +1528,10 @@ main .MainLogoTextMobile .MainImageLogo {
   transition: var(--transition-2);
 }
 .Maps .ButtonMaps:hover #point {
-  -webkit-animation: Pointer 3.2s var(--transition-2) forwards;
-          animation: Pointer 3.2s var(--transition-2) forwards;
-}
-.Maps .ButtonMaps:hover #route {
-  -webkit-animation: Route 3.6s var(--transition-2) forwards;
-          animation: Route 3.6s var(--transition-2) forwards;
+  -webkit-filter: blur(20px) opacity(0);
+          filter: blur(20px) opacity(0);
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 .Maps .popupMap {
   position: fixed;
@@ -1988,134 +1973,6 @@ footer .Social a:hover img {
             transform: translateY(1px) rotate(-2deg);
   }
 }
-@-webkit-keyframes Pointer {
-  0% {
-    bottom: 75%;
-    right: -2%;
-    -webkit-filter: blur(10px) opacity(0);
-            filter: blur(10px) opacity(0);
-  }
-  12% {
-    bottom: 75%;
-    right: -2%;
-    -webkit-filter: blur(0px) opacity(1);
-            filter: blur(0px) opacity(1);
-  }
-  24% {
-    bottom: 58%;
-    right: -3%;
-  }
-  36% {
-    bottom: 45%;
-    right: 1%;
-  }
-  48% {
-    bottom: 23%;
-    right: -2%;
-  }
-  64% {
-    bottom: 26%;
-    right: 8%;
-  }
-  77% {
-    bottom: 22%;
-    right: 15%;
-  }
-  92% {
-    bottom: 22%;
-    right: 15%;
-    -webkit-filter: blur(0px) opacity(1);
-            filter: blur(0px) opacity(1);
-  }
-  100% {
-    -webkit-filter: blur(20px) opacity(0);
-            filter: blur(20px) opacity(0);
-    bottom: 22%;
-    right: 15%;
-  }
-}
-@keyframes Pointer {
-  0% {
-    bottom: 75%;
-    right: -2%;
-    -webkit-filter: blur(10px) opacity(0);
-            filter: blur(10px) opacity(0);
-  }
-  12% {
-    bottom: 75%;
-    right: -2%;
-    -webkit-filter: blur(0px) opacity(1);
-            filter: blur(0px) opacity(1);
-  }
-  24% {
-    bottom: 58%;
-    right: -3%;
-  }
-  36% {
-    bottom: 45%;
-    right: 1%;
-  }
-  48% {
-    bottom: 23%;
-    right: -2%;
-  }
-  64% {
-    bottom: 26%;
-    right: 8%;
-  }
-  77% {
-    bottom: 22%;
-    right: 15%;
-  }
-  92% {
-    bottom: 22%;
-    right: 15%;
-    -webkit-filter: blur(0px) opacity(1);
-            filter: blur(0px) opacity(1);
-  }
-  100% {
-    -webkit-filter: blur(20px) opacity(0);
-            filter: blur(20px) opacity(0);
-    bottom: 22%;
-    right: 15%;
-  }
-}
-@-webkit-keyframes Route {
-  0% {
-    -webkit-filter: blur(10px) opacity(0);
-            filter: blur(10px) opacity(0);
-  }
-  10% {
-    -webkit-filter: blur(0) opacity(0.92);
-            filter: blur(0) opacity(0.92);
-  }
-  95% {
-    -webkit-filter: blur(0) opacity(0.92);
-            filter: blur(0) opacity(0.92);
-  }
-  100% {
-    -webkit-filter: blur(10px) opacity(0);
-            filter: blur(10px) opacity(0);
-  }
-}
-@keyframes Route {
-  0% {
-    -webkit-filter: blur(10px) opacity(0);
-            filter: blur(10px) opacity(0);
-  }
-  10% {
-    -webkit-filter: blur(0) opacity(0.92);
-            filter: blur(0) opacity(0.92);
-  }
-  95% {
-    -webkit-filter: blur(0) opacity(0.92);
-            filter: blur(0) opacity(0.92);
-  }
-  100% {
-    -webkit-filter: blur(10px) opacity(0);
-            filter: blur(10px) opacity(0);
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -2193,4 +2050,12 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--RedColor-1);
   border-radius: 30px;
+}
+
+body {
+  cursor: url("../../icons/cursor.png"), auto;
+}
+
+a:hover {
+  cursor: url("../../icons/CursorHover.png"), auto;
 }

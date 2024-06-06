@@ -801,6 +801,7 @@ main{
     }
 }
 .Maps{
+
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -819,12 +820,6 @@ main{
         color: var(--RedColor-1);
         position: relative;
         @media screen and (max-width:600px) {
-                #route{
-                    display: none;
-                }
-                #pointer{
-                    display: none;
-                }
                 width: 50%;
                 margin: 50px 20%;
                 padding: 10% 5%;
@@ -851,28 +846,19 @@ main{
             height: 50px;
             bottom: 75%;
             right: -2%;
-            filter: opacity(0);
-        }
-        #route{
-            width: 75%;
-            height: 100%;
-            bottom: 0;
-            right: 0;
-            filter: opacity(0);
         }
         &:hover{
-            #map{
+        cursor: url("../../icons/pointercursor.png"), auto;
+        #map{
                 transform: translateY(-20%) translateX(1%) rotate(-5deg);
                 transition: var(--transition-2);
-            }
-            #point{
-                animation: Pointer 3.2s var(--transition-2) forwards;
-            }
-            #route{
-                animation: Route 3.6s var(--transition-2) forwards;
-            }
+        }
+        #point{
+                filter: blur(20px) opacity(0);
+                transition: ease-in-out 0.2s;
         }
     }
+}
     .popupMap{
         position: fixed;
         width: 100%;

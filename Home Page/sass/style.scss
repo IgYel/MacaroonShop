@@ -29,3 +29,10 @@ body{
     background: var(--RedColor-1);
     border-radius: 30px;
 }
+
+body {
+  cursor: url("../../icons/cursor.png"), auto;
+}
+a:hover{
+    cursor: url("../../icons/CursorHover.png"), auto;
+}
