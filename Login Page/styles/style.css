@@ -25,6 +25,8 @@ header .PCheader .Upper .ButtonBar {
           justify-content: space-evenly;
 }
 header .PCheader .Upper .ButtonBar li {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
   margin-top: 12px;
   font-weight: 300;
   font-size: 17px;
@@ -94,6 +96,8 @@ header .PCheader .Upper #StoreBasket {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 3px;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 header .PCheader .Upper #StoreBasket img {
   width: 30px;
@@ -157,6 +161,8 @@ header .PCheader .Lower ul .sale {
   background-color: var(--RedColor-1);
 }
 header .PCheader .Lower ul li {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
   font-weight: 500;
   text-transform: uppercase;
   margin: 60px 10px 0px 10px;
@@ -174,6 +180,8 @@ header .PCheader .Lower ul li:hover {
 }
 
 .MainIcons {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
   background-color: var(--BlueColor-2);
   top: 50px;
   left: -43px;
@@ -194,6 +202,8 @@ header .PCheader .Lower ul li:hover {
           flex-direction: column;
 }
 .MainIcons img {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
   width: 40px;
   height: 40px;
   padding: 3px;

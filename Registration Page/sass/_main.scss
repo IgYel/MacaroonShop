@@ -148,6 +148,8 @@ main{
 .password{
     position: relative;
     #checkbox{
+        transition: ease-in-out 0.2s;
+        cursor: url("../../icons/CursorHover.png"), auto;
         position: absolute;
         bottom: 25%;
         right: 4%;

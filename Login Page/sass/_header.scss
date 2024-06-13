@@ -17,6 +17,7 @@ header{
             display: flex;
             justify-content: space-evenly;
             li{
+                transition: ease-in-out 0.2s;
                 margin-top: 12px;
                 font-weight: 300;
                 font-size: 17px;
@@ -92,7 +93,7 @@ header{
                     width: 20px;
                     margin: 20px 0px 0px 15px;
                 }
-                
+                transition: ease-in-out 0.2s;
                 &:hover{
                     color: var(--BlackColor-1);
                     transition: var(--transition-1);
@@ -123,6 +124,7 @@ header{
                 background-color: var(--RedColor-1);
             }
             li{
+                transition: ease-in-out 0.2s;
                 font-weight: 500;
                 text-transform: uppercase;
                 margin: 60px 10px 0px 10px;
@@ -141,6 +143,7 @@ header{
     }
 }
 .MainIcons{
+    transition: ease-in-out 0.2s;
     background-color:var(--BlueColor-2);
     top: 50px;
     left: -43px;
@@ -153,6 +156,7 @@ header{
     justify-content: space-evenly;
     flex-direction: column;
     img{
+        transition: ease-in-out 0.2s;
         width: 40px;
         height: 40px;
         padding: 3px;
@@ -262,4 +266,3 @@ header{
         }
     }
 }
-        

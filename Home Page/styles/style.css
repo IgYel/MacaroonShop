@@ -30,6 +30,8 @@ header .PCheader .Upper .ButtonBar li {
   font-size: 17px;
   border-radius: 7px;
   padding: 2px 3px;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 header .PCheader .Upper .ButtonBar li:hover {
   color: var(--BlackColor-1);
@@ -61,6 +63,8 @@ header .PCheader .Upper .Store li {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 3px;
+  -webkit-transition: var(--transition-1);
+  transition: var(--transition-1);
 }
 header .PCheader .Upper .Store li :nth-child(2) {
   margin: 0px 5px;
@@ -80,6 +84,8 @@ header .PCheader .Upper .Store li:hover {
           transform: translateY(-2px);
 }
 header .PCheader .Upper #StoreBasket {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
   background-color: var(--BlueColor-1);
   color: var(--GrayColor-1);
   border-radius: 10px 10px 0px 0px;
@@ -162,6 +168,8 @@ header .PCheader .Lower ul li {
   margin: 60px 10px 0px 10px;
   color: var(--GrayColor-1);
   padding: 5px;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 header .PCheader .Lower ul li:hover {
   -webkit-transition: ease-in-out 0.5s;
@@ -192,12 +200,16 @@ header .PCheader .Lower ul li:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 .MainIcons img {
   width: 40px;
   height: 40px;
   padding: 3px;
   border-radius: 17px;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 .MainIcons img:hover {
   background-color: rgba(0, 0, 0, 0.285);
@@ -498,6 +510,8 @@ main .CardlistSections {
   margin: 50px 135px;
 }
 main .CardlistSections li {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,6 +533,8 @@ main .CardlistSections li {
 main .CardlistSections li span:nth-child(2) {
   font-size: 24px;
   font-weight: 600;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 main .CardlistSections li:hover {
   border-radius: 30px;
@@ -622,6 +638,10 @@ main .OnSale .List .Card {
   width: 22%;
   height: 22%;
   background-color: var(--RedColor-1);
+}
+main .OnSale .List .Card img {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 main .OnSale .List .Card:hover {
   overflow: hidden;
@@ -873,6 +893,8 @@ main .Kits .List .Card .MainImage {
   -webkit-filter: brightness(0.93) grayscale(0.13);
           filter: brightness(0.93) grayscale(0.13);
   height: 300px;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 main .Kits .List .Card .Text {
   padding: 20px 20px;
@@ -902,6 +924,8 @@ main .Kits .List .Card .CardBuy .Price {
   font-size: 23px;
 }
 main .Kits .List .Card .CardBuy .ToCart {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
   padding: 2px 5px;
 }
 main .Kits .List .Card .CardBuy .ToCart img {
@@ -930,6 +954,34 @@ main .Kits .Button {
   font-size: 26px;
   font-weight: 800;
   position: relative;
+}
+main .Kits .Button #Top {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+main .Kits .Button #Mid {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+main .Kits .Button #Bottom {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+main .Kits .Button #Top1 {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+main .Kits .Button #Mid1 {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+main .Kits .Button #Bot2 {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+main .Kits .Button #Bot3 {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 main .Kits .Button:hover {
   background-color: var(--BlueColor-1);
@@ -1076,6 +1128,8 @@ main .News .List .Card .MainImage {
   -webkit-filter: brightness(0.9) grayscale(0.15);
           filter: brightness(0.9) grayscale(0.15);
   height: 210px;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1138,6 +1192,10 @@ main .News .OutButton .Button .Icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+main .News .OutButton .Button .Icons img {
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 main .News .OutButton .Button img {
   width: 40px;
@@ -1507,12 +1565,16 @@ main .MainLogoTextMobile .MainImageLogo {
   position: absolute;
 }
 .Maps .ButtonMaps #map {
+  -webkit-transition: var(--transition-2);
+  transition: var(--transition-2);
   width: 70px;
   height: 70px;
   bottom: 3%;
   left: 1%;
 }
 .Maps .ButtonMaps #point {
+  -webkit-transition: var(--transition-2);
+  transition: var(--transition-2);
   width: 50px;
   height: 50px;
   bottom: 75%;
@@ -2032,15 +2094,21 @@ main {
 }
 
 html {
-  max-width: 3000px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-
-html,
-body {
+html body {
   background-color: var(--WhiteColor-3);
   color: var(--BlackColor);
   width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  max-width: 2800px;
 }
 
 ::-webkit-scrollbar {

@@ -59,6 +59,7 @@ main{
         gap: 25px 30px;
         margin: 50px 135px;
         li{
+            transition: ease-in-out 0.2s;
             display: flex;
             flex-direction: column;
             justify-content: start;
@@ -70,6 +71,7 @@ main{
                 span:nth-child(2){
                     font-size: 24px;
                     font-weight: 600;
+                    transition: ease-in-out 0.2s;
             }
             &:hover{
                 :nth-child(2){
@@ -128,6 +130,9 @@ main{
             flex-direction: row;
             justify-content: space-between;
             .Card{
+                img{
+                    transition: ease-in-out 0.2s;
+                }
                 filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.363));
                 @include CardWrap(0, 0, 5px);
                 color: var(--WhiteColor-1);
@@ -327,6 +332,7 @@ main{
                     max-width: 100%;
                     filter: brightness(0.93) grayscale(0.13);
                     height: 300px;
+                    transition: ease-in-out 0.2s;
                 }
                 width: 370px;
                 height: 460px;
@@ -343,6 +349,7 @@ main{
                         font-size: 23px;
                     }
                     .ToCart{
+                        transition: ease-in-out 0.2s;
                         padding: 2px 5px;
                         img{
                             width: 23px;
@@ -371,6 +378,27 @@ main{
             font-size: 26px;
             font-weight: 800;
             position: relative;
+            #Top{
+                transition: ease-in-out 0.2s;
+            }
+            #Mid{
+                transition: ease-in-out 0.2s;
+            }
+            #Bottom{
+                transition: ease-in-out 0.2s;
+            }
+            #Top1{
+                transition: ease-in-out 0.2s;
+            }
+            #Mid1{
+                transition: ease-in-out 0.2s;
+            }
+            #Bot2{
+                transition: ease-in-out 0.2s;
+            }
+            #Bot3{
+                transition: ease-in-out 0.2s;
+            }
             &:hover{
                 background-color: var(--BlueColor-1);
                 transition: ease-in-out 100ms;
@@ -472,6 +500,7 @@ main{
                 .MainImage{
                     filter: brightness(0.9) grayscale(0.15  );
                     height: 210px;
+                    transition: ease-in-out 0.2s;
                     object-fit: cover;
                 }
                 .CardInfo{
@@ -513,6 +542,9 @@ main{
                 font-weight: 800;
                 .Icons{
                     display: flex;
+                    img{
+                        transition: ease-in-out 0.2s;
+                    }
                 }
                 img{
                     width: 40px;
@@ -836,12 +868,14 @@ main{
             position: absolute;
         }
         #map{
+            transition: var(--transition-2);
             width: 70px;
             height: 70px;
             bottom: 3%;
             left: 1%;
         }
         #point{
+            transition: var(--transition-2);
             width: 50px;
             height: 50px;
             bottom: 75%;
@@ -849,6 +883,7 @@ main{
         }
         &:hover{
         cursor: url("../../icons/pointercursor.png"), auto;
+        
         #map{
                 transform: translateY(-20%) translateX(1%) rotate(-5deg);
                 transition: var(--transition-2);
