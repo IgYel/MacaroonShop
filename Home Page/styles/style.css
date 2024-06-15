@@ -351,6 +351,14 @@ header .PCheader .Lower ul li:hover {
   position: absolute;
   top: -5%;
   right: -10%;
+  -webkit-transition: var(--transition-2);
+  transition: var(--transition-2);
+}
+.MainIcons .popup .popupBody .popupClose:hover {
+  background-color: var(--RedColor-1);
+  color: var(--WhiteColor-1);
+  -webkit-transition: var(--transition-2);
+  transition: var(--transition-2);
 }
 .MainIcons .LoginSection {
   position: relative;
@@ -527,8 +535,18 @@ main .CardlistSections li {
           align-items: center;
   padding: 35px;
   text-align: center;
-  border-radius: 3;
+  border-radius: 3px;
+  position: relative;
   background-color: #FFDBC3;
+}
+main .CardlistSections li a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  border-radius: 3px;
+  top: 0;
+  left: 0;
 }
 main .CardlistSections li span:nth-child(2) {
   font-size: 24px;
@@ -617,6 +635,7 @@ main .OnSale .List {
           justify-content: space-between;
 }
 main .OnSale .List .Card {
+  overflow: hidden;
   -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.363));
           filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.363));
   padding: 0 0;
@@ -845,6 +864,7 @@ main .Kits .List {
       justify-content: space-around;
 }
 main .Kits .List .Card {
+  overflow: hidden;
   background-color: var(--WhiteColor-1);
   margin-top: 10px;
   -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
@@ -1095,6 +1115,7 @@ main .News .List {
           justify-content: space-evenly;
 }
 main .News .List .Card {
+  overflow: hidden;
   margin-top: 10px;
   background-color: var(--WhiteColor-1);
   -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
@@ -1649,6 +1670,8 @@ main .MainLogoTextMobile .MainImageLogo {
   top: -5%;
   border-radius: 100%;
   text-align: center;
+  -webkit-transition: var(--transition-2);
+  transition: var(--transition-2);
 }
 .Maps .popupMap .popupMapContent .popupClose:hover {
   background-color: var(--RedColor-1);

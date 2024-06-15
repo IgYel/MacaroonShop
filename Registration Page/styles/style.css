@@ -354,6 +354,14 @@ header {
   position: absolute;
   top: -5%;
   right: -10%;
+  -webkit-transition: var(--transition-2);
+  transition: var(--transition-2);
+}
+.MainIcons .popup .popupBody .popupClose:hover {
+  background-color: var(--RedColor-1);
+  color: var(--WhiteColor-1);
+  -webkit-transition: var(--transition-2);
+  transition: var(--transition-2);
 }
 .MainIcons .LoginSection {
   position: relative;
