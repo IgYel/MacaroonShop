@@ -1,0 +1,980 @@
+main{
+    .MainLogoText{
+        background-image: url(../images/MainBack.png);
+        background-repeat: no-repeat;
+        .MainText{
+            position: absolute;
+            width: 450px;
+            align-items: center;
+            top: 343px;
+            left: 55%;
+            ul{
+                #year{
+                    font-size: 16px;
+                    color: var(--GrayColor-1);
+                    display: flex;
+                    flex-direction:row;
+                    justify-content: center;
+
+                    .Line{
+                        width: 30px;
+                        height: 2px;
+                        background-color: var(--GrayColor-1);
+                        align-self: center;
+                        margin: 0px 10px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            .Name{
+                text-transform: uppercase;
+                font-size: 22px;
+                text-align: center;
+            }
+            .Slogan{
+                margin: 24px auto 10px auto;
+                font-weight: 600;
+                font-size: 42px;
+            }
+            .Text{
+                font-weight: 400;
+                font-size: 18px;
+                text-align:center;
+                text-wrap: nowrap;
+                line-height: 22px;
+            }
+        }
+        border-bottom: 3px solid #cc9aa2;
+    }
+
+    .CardlistSections{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        grid-auto-flow: row;
+        gap: 25px 30px;
+        margin: 50px 135px;
+        li{
+            transition: ease-in-out 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            padding: 35px;
+            text-align: center;
+            border-radius: 3px;
+            position: relative;
+            a{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 5;
+                border-radius: 3px;
+                top: 0;
+                left: 0;
+            }
+            
+                span:nth-child(2){
+                    font-size: 24px;
+                    font-weight: 600;
+                    transition: ease-in-out 0.2s;
+            }
+            &:hover{
+                :nth-child(2){
+                    background-color: rgba(0, 0, 0, 0.12);
+                    border-radius: 20px;
+                    padding: 7px 15px 2px 5px;
+                    transition: ease-in-out 0.3s;
+                    margin: 5px 0px;
+                }
+                :nth-child(1){
+                    transform: rotate(360deg);
+                    transition: ease-in-out 0.75s;
+                }
+                border-radius: 30px;
+                transition: ease-in-out 0.3s;
+                transform: scale(1.02) translateY(-8px);
+            } 
+            img{
+                height: 100px;
+                width: 100px;
+            }
+            background-color: #FFDBC3;
+            &:first-child{
+                    background: linear-gradient(to bottom right, #feeadc 50%, #FFDBC3 50%);
+            }
+            &:nth-child(2){
+                    background: linear-gradient(to bottom left, #fedce2 50%, #FFC2CC 50%);
+            }
+            &:nth-child(3){
+                    background: linear-gradient(to top right, #d4f2d3 50%, #B4EAB3 50%);
+            }
+            &:nth-child(4){
+                    background: linear-gradient(to top left, #fde7e2 50%, #FDD5CD 50%);
+            }
+            &:nth-child(5){
+                    background: linear-gradient(to bottom right, #cdeaec 50%, #A8DCDF 50%);
+            }
+            &:nth-child(6){
+                    background: linear-gradient(to bottom left, #dddef3 50%, #C4C6EC 50%);
+            }
+        }
+    }
+
+    .OnSale{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10%;
+        text-align: center;
+        .Name{
+            @include HeadText(36px, 700, center);
+            margin-bottom: 50px;
+        }
+        .List{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .Card{
+                img{
+                    transition: ease-in-out 0.2s;
+                }
+                overflow: hidden;
+                filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.363));
+                @include CardWrap(0, 0, 5px);
+                color: var(--WhiteColor-1);
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width: 22%;
+                height: 22%;
+                background-color: var(--RedColor-1);
+                &:hover {
+                    img{
+                        scale: 1.04;
+                        transition: ease-in-out 300ms;
+                        filter: brightness(1) grayscale(0);
+                    }
+                    overflow: hidden;
+                }
+
+                span{
+                    &:nth-child(2){
+                        @include CardWrap(20px, 20px, 0);
+                        height: 90px;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: 28%;
+                    filter: brightness(0.9) grayscale(0.2);
+                }
+
+                &:first-child{
+                    background-color: var(--BlueColor-2);
+                }
+            }
+            .Strip{
+                z-index: 2;
+                position: absolute;
+                top: 3%;
+                background-color: var(--RedColor-1);
+                padding: 3px 5px;
+                font-weight: bolder;
+            }
+                #FreeDel{
+                background-color: var(--BlueColor-2);
+            }
+        }
+    }
+    
+    .Dates{
+        height: 300px;
+        .ListName{
+            @include HeadText(36px, 700, center);
+            display: flex;
+            justify-content: center;
+            margin: auto auto 30px auto;
+        }
+        width: 80%;
+        margin: 0px 10%;
+        ul{
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            li{
+                .Birthday{
+                    position: relative;
+                    .BirthCap{
+                        position: absolute;
+                        left: 45%;
+                        bottom: 40px;
+                    }
+                }
+                span{
+                    font-family:cursive;
+                }
+                margin: auto 20px;
+                width: 200px;
+                img{
+                    width: 58px;
+                    height: 50px;
+                    align-self: center;
+                    margin-bottom: 10px;
+                }
+
+                @media (max-width: 1300px){
+                    &:nth-child(2){
+                        transform: translateY(-5px);
+                    }
+                    &:nth-child(3){
+                        transform: translateY(-15px);
+                    }
+                    &:nth-child(4){
+                        transform: translateY(-20px);
+                    }
+                    &:last-child{
+                        transform: translateY(-20px);
+                    }
+                }
+                
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                font-size: 15px;
+                font-weight: 400;
+                &:first-child{
+                    font-weight: 500;
+                    font-size: 18px;
+                    img{
+                        width: 78px;
+                        height: 68px;
+                    }
+                }
+                &:nth-child(4){
+                    img{
+                        transform:translateY(5px) rotate(-30deg);
+                    }
+                }
+                &:last-child{
+                    margin-top: 2%;
+                    img{
+                        transform: rotate(40deg);
+                    }
+                }
+            }
+        }
+        position: relative;
+        .Line{
+            width: 99%;
+            left: 95px;
+            z-index: 0;
+            position: absolute;
+            top: 40%;
+            border: 2px dashed rgb(200, 200, 200)
+        }
+        .BorderRight{
+            width: 540px;
+            height: 350px;
+            background: linear-gradient(to left, var(--WhiteColor-3) 50%, transparent);
+            position: absolute;
+            top: -10px;
+            right: 0px;
+            z-index: 8;
+        }
+    }
+
+    .Kits{
+        margin-top: 100px;
+        .Name{
+            @include HeadText(36px, 700, center);
+            margin-bottom: 42px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .List{
+            flex-wrap: wrap;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            .Card{
+                overflow: hidden;
+                &:hover {
+                    .MainImage{
+                        scale: 1.02;
+                        transition: ease-in-out 300ms;
+                        filter: brightness(1) grayscale(0);
+                    }
+                    overflow: hidden;
+                }
+                background-color: var(--WhiteColor-1);
+                margin-top: 10px;
+                filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.300));
+                @include CardWrap(auto, auto, 5px);
+                
+                .CardName{
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .CardText{
+                    font-weight: 400;
+                    .Pink{
+                        color: var(--RedColor-1);
+                        font-weight: 500;
+                    }
+                    margin-bottom: 10px;
+                }
+                .MainImage{
+                    max-width: 100%;
+                    filter: brightness(0.93) grayscale(0.13);
+                    height: 300px;
+                    transition: ease-in-out 0.2s;
+                }
+                width: 370px;
+                height: 460px;
+                .Text{
+                    @include CardWrap(20px, 20px, 0px);
+                }
+                
+                .CardBuy{
+                    display: flex;
+                    justify-content: space-between;
+                    .Price{
+                        color: var(--RedColor-1);
+                        font-weight: 600;
+                        font-size: 23px;
+                    }
+                    .ToCart{
+                        transition: ease-in-out 0.2s;
+                        padding: 2px 5px;
+                        img{
+                            width: 23px;
+                            height: 23px;
+                        }
+                        &:hover{
+                            background-color:rgba(0, 0, 0, 0.200);
+                            border-radius: 5px;
+                            padding: 2px 5px;
+                            transition: var(--transition-1);
+                            transform: translateY(-2px);
+                        }
+                    }
+                }
+            }
+        }
+        .Button{
+            margin: 50px;
+            align-self: center;
+            width: 330px;
+            background-color: var(--WhiteColor-1);
+            border: 2px solid var(--BlueColor-1);
+            border-radius: 5px;
+            text-align: center;
+            padding: 30px;
+            font-size: 26px;
+            font-weight: 800;
+            position: relative;
+            #Top{
+                transition: ease-in-out 0.2s;
+            }
+            #Mid{
+                transition: ease-in-out 0.2s;
+            }
+            #Bottom{
+                transition: ease-in-out 0.2s;
+            }
+            #Top1{
+                transition: ease-in-out 0.2s;
+            }
+            #Mid1{
+                transition: ease-in-out 0.2s;
+            }
+            #Bot2{
+                transition: ease-in-out 0.2s;
+            }
+            #Bot3{
+                transition: ease-in-out 0.2s;
+            }
+            &:hover{
+                background-color: var(--BlueColor-1);
+                transition: ease-in-out 100ms;
+                border: 2px solid var(--BlueColor-2);
+                #Top{
+                    transition: var(--transition-1);
+                    transform: translateY(-8px) rotate(4deg);
+                }
+                #Mid{
+                    transition: var(--transition-1);
+                    transform: translateY(-5px) rotate(-1deg);
+                    height: 4px;                   
+                }
+                #Bottom{
+                    transition: var(--transition-1);
+                    transform: translateY(-3px);
+                }
+                #Top1{
+                    animation: TopAnimation 1s ease-in-out forwards;
+                }
+                #Mid1{
+                    animation: MidAnimation 1s ease-in-out forwards;
+                }
+                #Bot3{
+                    animation: Bot2Animation 1s ease-in-out forwards;
+                }
+                #Bot2{
+                    transition: var(--transition-1);
+                    animation: BottomAnimation 0.7s ease-in-out forwards;
+                }
+            }
+            .MacaronBounce{
+                scale: 1.3;
+                position: absolute;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                top: 60px;
+                left: 10px;
+                img{
+                    width: 30px;
+                    height: 10px;
+                    &:nth-child(2){
+                        height: 2.25px;
+                    }
+                }
+            }
+            .MacaronsBounce{
+                scale: 1.3;
+                position: absolute;
+                width: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                top: 40px;
+                right: 3%;
+                img{
+                    width: 30px;
+                    height: 10px;
+                    &:nth-child(2){
+                        height: 2.25px;
+                    }
+                    &:nth-child(4){
+                        height: 22.25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .News{
+        .Name{
+            @include HeadText(36px, 700, center);
+            margin: 50px auto;
+        }
+        .List{
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-evenly;
+            .Card{
+                overflow: hidden;
+                margin-top: 10px;
+                &:hover {
+                    .MainImage{
+                        scale: 1.02;
+                        transition: ease-in-out 300ms;
+                        filter: brightness(1) grayscale(0);
+                    }
+                    overflow: hidden;
+                }
+                background-color: var(--WhiteColor-1);
+                filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.300));
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                width: 370px;
+                height: fit-content;
+                .MainImage{
+                    filter: brightness(0.9) grayscale(0.15  );
+                    height: 210px;
+                    transition: ease-in-out 0.2s;
+                    object-fit: cover;
+                }
+                .CardInfo{
+                    padding: 20px;
+                    flex-direction: column;
+                    justify-content:space-evenly;
+                    display: flex;
+                    .Date{
+                        color: var(--GrayColor-2);
+                        text-align: start;
+                        margin: 20px 0px 0px 0px;
+                    }
+                    .NameCard{
+                        margin: 10px 0px;
+                        font-weight: 600px;
+                        font-size: 18px;
+                    }
+                    .TextCard{
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: var(--GrayColor-3);
+                    }
+                }
+            }
+        }
+        .OutButton{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .Button{
+                margin: 50px;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--WhiteColor-1);
+                border: 2px solid var(--BlueColor-2);
+                border-radius: 5px;
+                padding: 27px 100px;
+                font-size: 23px;
+                font-weight: 800;
+                .Icons{
+                    display: flex;
+                    img{
+                        transition: ease-in-out 0.2s;
+                    }
+                }
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+                    position: relative;
+                    #News1{
+                        right: 5px;
+                        bottom: 8px;
+                        position: absolute;
+                    }
+                    #News2{
+                        right: 5px;
+                        bottom: 3px;
+                        position: absolute;
+                    }
+                    position: relative;
+                    #CupTop{
+                        left: 5px;
+                        bottom: 45px;
+                        height: 15px;
+                        position: absolute;
+                    }
+                    #CupBot{
+                        left: 5px;
+                        bottom: 5px;
+                        position: absolute;
+                    }
+
+                    &:hover{
+                        background-color: var(--BlueColor-1);
+                        transition: ease-in-out 100ms;
+                        border: 2px solid var(--BlueColor-2);
+                        #CupBot{
+                            transition: var(--transition-2);
+                            transform: translate(0px, -8px) rotate(5deg);
+                        }
+                        #CupTop{
+                            transition: var(--transition-2);
+                            transform: translate(2px, -18px) rotate(-4deg);
+                        }
+                        #News1{
+                            transition: var(--transition-2);
+                            transform: translate(5px, -15px) rotate(7deg);
+                        }
+                        #News2{
+                            transition: var(--transition-2);
+                            transform: translate(-2px, -8px) rotate(-3deg);
+                        }
+                    }
+                }
+            }
+    }
+
+    .MainLogoTextMobile{
+        border-bottom: 2px solid var(--RedColor-1);
+        margin-top: 10px;
+        height: 200%;
+        width: 100%;
+        @media screen and (max-width:500px) {
+            .MainText{
+                scale: 0.9;
+                top: -10%;
+            }
+            margin-top: 50px;
+        }
+        @media screen and (max-width:430px) {
+            .MainText{
+                scale: 0.7;
+                top: -20%;
+            }
+            margin-top: 50px;
+        }
+        .MainText{
+            margin-top: 50px;
+            width: 100%;
+            align-items: center;
+            position: absolute;
+            z-index: 5;
+            ul{
+                #year{
+                    font-size: 16px;
+                    color: var(--GrayColor-1);
+                    display: flex;
+                    flex-direction:row;
+                    justify-content: center;
+
+                    .Line{
+                        width: 30px;
+                        height: 2px;
+                        background-color: var(--GrayColor-1);
+                        align-self: center;
+                        margin: 0px 10px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            .Name{
+                text-transform: uppercase;
+                font-size: 22px;
+                text-align: center;
+            }
+            .Slogan{
+                margin: 24px auto 10px auto;
+                font-weight: 600;
+                font-size: 42px;
+                text-align: center;
+            }
+            .Text{
+                font-weight: 400;
+                font-size: 18px;
+                text-align:center;
+                line-height: 22px;
+            }
+        }
+        position: relative;
+        .MainImageLogo{
+            width: 100%;
+            height: 100%;
+    }
+} 
+    @media screen and (max-width: 1000px) {
+        .MainLogoText{
+            display: none;
+        }
+    }   
+
+    @media screen and (min-width: 1000px) {
+        .MainLogoTextMobile{
+            display: none;
+        }
+    } 
+    @media screen and (max-width: 730px) {
+        .Dates{
+            margin-top: 100px;
+            position: relative;
+            ul{
+                width: 100%;
+                align-items: center;
+                flex-direction: column;
+                li{
+                .Birthday{
+                    position: relative;
+                    .BirthCap{
+                        position: absolute;
+                        bottom: 40px;
+                        left: 35%;
+                    }
+                }
+                    width: 80%;
+                    margin-right: 0px;
+                    margin-bottom: 15px;
+                    span{
+                        text-align: left;
+                        width: 200px;
+                        text-wrap: nowrap;
+                    }
+                    flex-direction: row;
+                    &:first-child{
+                        margin-left:0px;
+                    }
+                    &:nth-child(2){
+                        span{
+                            margin-left: 22px;
+                        }
+                    }
+                    &:nth-child(3){
+                        span{
+                            margin-left: 22px;
+                        }
+                    }
+                    &:last-child{
+                        display: none;
+                    }
+                    &:nth-child(4){
+                        display: none;
+                    }
+                    &:nth-child(5){
+                        display: none;
+                    }
+                }
+            }
+            .Line{
+                position: absolute;
+                transform: rotate(-90deg);
+                top: 270px;
+                left: -20px;
+                width: 200px;
+                @media screen and (max-width: 350px) {
+                            left: -40px;
+                }
+            }
+            .BorderRight{
+                display: none;
+            }
+
+        }
+        .MainLogoText{
+            display: none;
+        }
+        .CardlistSections{
+            display: flex;
+            flex-direction: column;
+            margin: 100px 10px 10px 10px;
+            gap: 10px;
+            li{
+                display: flex;
+                padding: 10px 0px;
+                span{
+                    scale: 0.7;
+                    text-wrap: wrap;
+                    padding: 0;
+                    margin: 0;
+                    &:last-child{
+                        display: none;
+                    }
+                }
+                img{
+                    display: none;
+                }
+            }
+        }
+        .OnSale{
+            .Name{
+                margin-bottom: 10px;
+            }
+            margin-top: 100px;
+            padding: 0;
+            width: 100%;
+            .List{
+                padding-left: 5%;
+                width: 90%;
+                flex-direction: column;
+                gap: 15px;
+                .Card{
+                    width: 100%;
+                }
+            }
+        }
+        .Kits{
+            .Name{
+                margin-bottom: 10px;
+            }
+            margin-top: 100px;
+            ul{
+                gap: 15px;
+            }
+            .Button{
+                width: 70%;
+            }
+        }
+        .News{
+            img{
+                max-width: 100%;
+            }
+            margin-top: 100px;
+            .Name{
+                margin: 0px 0px 10px 0px;
+            }
+            ul{
+                gap: 10px;
+            }
+        }
+    }
+    @media screen and (max-width: 300px) {
+        .Dates{
+            scale: 0.8;
+        }
+    }
+    @media screen and (min-width: 731px) {
+        .Dates{
+            .Line{
+                width: 85%;
+            }
+            .BorderRight{
+                right: -10%;
+                width: 250px;
+            }
+            :nth-child(5){
+                margin-top: 45px;
+            }
+        }
+    }
+}
+.Maps{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    .ButtonMaps{
+        width: 20%;
+        margin: 50px 35%;
+        background-color: var(--WhiteColor-1);
+        border: 2px solid var(--BlueColor-2);
+        border-radius: 5px;
+        padding: 45px 5%;
+        font-size: 23px;
+        font-weight: 800;
+        text-align: center;
+        color: var(--RedColor-1);
+        position: relative;
+        @media screen and (max-width:600px) {
+                width: 50%;
+                margin: 50px 20%;
+                padding: 10% 5%;
+            }
+        @media screen and (max-width:380px) {
+            padding-bottom: 25%;
+        }
+        &:hover{
+            background-color: var(--BlueColor-1);
+            transition: ease-in-out 100ms;
+            border: 2px solid var(--BlueColor-2);
+        }
+        img{
+            position: absolute;
+        }
+        #map{
+            transition: var(--transition-2);
+            width: 70px;
+            height: 70px;
+            bottom: 3%;
+            left: 1%;
+        }
+        #point{
+            transition: var(--transition-2);
+            width: 50px;
+            height: 50px;
+            bottom: 75%;
+            right: -2%;
+        }
+        &:hover{
+        cursor: url("../../icons/pointercursor.png"), auto;
+        
+        #map{
+                transform: translateY(-20%) translateX(1%) rotate(-5deg);
+                transition: var(--transition-2);
+        }
+        #point{
+                filter: blur(20px) opacity(0);
+                transition: ease-in-out 0.2s;
+        }
+    }
+}
+    .popupMap{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 18, 39, 0.514);
+        top: 0;
+        left: 0;
+        z-index: 8;
+        .popupMapBody{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .popupMapContent{
+            filter: drop-shadow(0px 4px 5px rgba(6, 17, 65, 0.747));
+            width: 50%;
+            height: 80%;
+            .mapFrame{
+                width: 100%;
+                height: 100%;
+                border-radius: 40px;
+            }
+            @media screen and (max-width: 700px) {
+                width: 90%;
+            }
+            position: relative;
+            .popupClose{
+                width: 60px;
+                height: 60px;
+                padding: 5px;
+                font-size: 45px;
+                position: absolute;
+                background-color: var(--WhiteColor-1);
+                color: var(--RedColor-1);
+                right: -5%;
+                top: -5%;
+                border-radius: 100%;
+                text-align: center;
+                transition: var(--transition-2);
+                &:hover{
+                    background-color: var(--RedColor-1);
+                    color: var(--WhiteColor-1);
+                    transition: var(--transition-2);
+                }
+            }
+        }
+        visibility: hidden;
+        opacity: 0;
+        filter: blur(30px);
+        &:target{
+            opacity: 1;
+            visibility: visible;
+            filter: blur(0);
+            transition: ease-in-out 0.1s;
+        }
+        .popupArea{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            
+            filter: grayscale(0.2) saturate(1);
+            &:hover{
+                filter: grayscale(0) saturate(1.3);
+                transition: var(--transition-2);
+            }
+        }
+    }
+}

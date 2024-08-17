@@ -1,0 +1,170 @@
+main{
+    .Registration{
+        .background{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: var(--WhiteColor-2);
+            filter: blur(0px) opacity(1);
+        }
+        border-radius: 10px;
+        margin: 12%;
+        width: 76%;
+        height: fit-content;
+        z-index: 1;
+        position: relative;
+
+        .Register{
+            padding: 5%;
+        }
+        .MainName{
+            text-align: center;
+            font-size: 35px;
+            font-weight: 700;
+        }
+        .SecondName{
+            text-align: center;
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--GrayColor-3);
+            margin: 15px 0px 20px 0px;
+        }
+        .MainImg{
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .FormsList{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto;
+            li{
+                .FormName{
+                    margin-left: 2.5%;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+                width: 100%;
+                form{
+                    width: 100%;
+                    input{
+                        overflow: hidden;
+                        color: var(--BlueColor-2);
+                        font-weight: 800;
+                        font-size: 20px;
+                        width: 90%;
+                        padding: 2.5%;
+                        margin: 1% 2.5% 2.5% 2.5%;
+                        letter-spacing: 2px;
+                        word-spacing: 12px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+            margin-bottom: 30px;
+        }
+    }
+    .Button{
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--RedColor-1);
+        div{
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+            color: var(--WhiteColor-1);
+        }
+    }
+    .LogIn{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        a{
+            color: var(--RedColor-1);
+            font-weight: 800;
+        }
+    }
+    .Info{
+        margin-top: 20px;
+        text-align: center;
+        color: var(--GrayColor-3);
+        font-weight: 600;
+        a{
+            color: rgb(100, 130, 211);
+            font-weight: 800;
+        }
+    }
+}
+
+@media screen and (max-width:850px) {
+    header{
+        .Lower{
+            li{
+                font-size: 10px;
+            }
+        }
+    }
+    main{
+        .Registration{
+            .background{
+                filter: blur(1px) opacity(0.7);
+            }
+            .MainName{
+                font-size: 25px;
+            }
+            .SecondName{
+                font-size: 20px;
+            }
+            .FormsList{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                li{
+                    width: 100%;
+                }
+                .password{
+                    #checkbox{
+                        bottom: 14%;
+                        scale: 0.8;
+                        right: 0%;
+                    }
+                    input{
+                        padding-right: 20%;
+                        width: 74%;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        padding: 5%;
+    }
+}
+.password{
+    position: relative;
+    #checkbox{
+        transition: ease-in-out 0.2s;
+        cursor: url("../../icons/CursorHover.png"), auto;
+        position: absolute;
+        bottom: 25%;
+        right: 4%;
+        height: 30px;
+        width: 30px;
+        padding: 5px;
+        filter: brightness(0.1);
+        &:hover{
+            background-color: rgb(200, 200, 200);
+            border-radius: 50%;
+            filter: brightness(0.93);
+            transition: ease-in-out 0.3s
+        }
+    }
+}
+.background{
+    border-radius: 10px;
+}
