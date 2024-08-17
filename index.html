@@ -1,17 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Index Page</title>
-    <link rel="icon" href="./icons/FavIcon.png" type="image/x-icon" />
-  </head>
-  <body>
-    <a href="./HomePage.html"> Home Page</a>
-    <br />
-    <a href="./LoginPage.html">Login</a>
-    <br />
-    <a href="./RegPage.html">Registration</a>
-  </body>
+
+<head>
+  <link rel="stylesheet" href="./Home Page/styles/style.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomePage</title>
+  <link rel="icon" href="./icons/FavIcon.png" type="image/x-icon">
+  <script defer async src="./Home Page/paralax.js"></script>
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section class="MainIcons">
+      <div id="popup" class="popup">
+        <div class="popupBody">
+          <div class="popupContent">
+            <section class="LoginSection">
+              <a href="#" class="popupClose">
+                X
+              </a>
+              <div class="Login">
+                <div data-lang-ru="Вход" data-lang-cz="Přihlášení" class="MainName">
+                  Přihlášení
+                </div>
+                <ul class="FormsList">
+                  <li>
+                    <span class="FormName">
+                      E-mail
+                    </span>
+                    <form>
+                      <input required type="text" placeholder="e-mail">
+                    </form>
+                  </li>
+                  <li>
+                    <span data-lang-ru="Пароль" data-lang-cz="Heslo" class="FormName">
+                      Heslo
+                    </span>
+                    <form>
+                      <input minlength="8" required type="password" placeholder="password">
+                    </form>
+                  </li>
+                </ul>
+                <a
+                href="">
+                  <div
+                  data-lang-ru="Вход"
+                  data-lang-cz="Přihlášení" class="LogInSubmit" inputmode="submit">
+                    Вход
+                  </div>
+                </a>
+              </div>
+
+              <div class="Text">
+              <span
+              data-lang-ru="Еще не зарегестрированы?"
+              data-lang-cz="Ještě nejste registrováni?">
+              Ještě nejste registrováni?
+            </span>
+            <br>
+            <a href="./RegPage.html" class="RegButton">
+              <span
+              data-lang-ru="Зарегистрироваться"
+              data-lang-cz="Registrovat se">
+                Registrovat se
+              </span>
+            </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <a href="#popup">
+        <img src="./icons/Profile.png" alt="">
+      </a>
+      <a href="">
+        <img src="./icons/bag.svg" alt="">
+      </a>
+      <a href="">
+        <img src="./icons/heart.png" alt="">
+      </a>
+      <div id="languageSwitch" onclick="switchLanguage()" id="languageSwitch" href="#">
+        <img src="./icons/language.png" alt="">
+      </div>
+    </section>
+
+    <section class="MainLogoText">
+      <div id="parallax">
+      </div>
+
+      <div class="MainText">
+        <ul>
+          <li class="Name">Macaronshop</li>
+          <li id="year">
+            <div class="Line"></div>
+            since 2013
+            <div class="Line"></div>
+          </li>
+        </ul>
+
+        <div data-lang-ru="Настоящая любовь" data-lang-cz="Pravá láska" class="Slogan">Pravá láska</div>
+
+        <div class="Text">
+          <span data-lang-ru="Пирожные макаруны и другие десерты" data-lang-cz="Makronky a další dezerty">
+            Пирожные макаруны и другие десерты
+          </span>
+          <br>
+          <span data-lang-ru="из натуральных ингредиентов, приготовленные с любовью"
+            data-lang-cz="z přírodních ingrediencí, připravované s láskou">
+            из натуральных ингредиентов, приготовленные с любовью
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="MainLogoTextMobile">
+
+      <div class="MainText">
+        <ul>
+          <li class="Name">Macaronshop</li>
+          <li id="year">
+            <div class="Line"></div>
+            since 2013
+            <div class="Line"></div>
+          </li>
+        </ul>
+
+        <div data-lang-ru="Настоящая любовь" data-lang-cz="Pravá láska" class="Slogan"></div>
+
+        <div class="Text">
+          <span data-lang-ru="Пирожные макаруны и другие десерты" data-lang-cz="Makronky a další dezerty">
+          </span>
+          <br>
+          <span data-lang-ru="из натуральных ингредиентов, приготовленные с любовью"
+            data-lang-cz="z přírodních ingrediencí, připravované s láskou">
+          </span>
+        </div>
+      </div>
+      <img class="MainImageLogo" src="./images/HeartLogo.png" alt="">
+      </div>
+    </section>
+
+    <ul class="CardlistSections">
+      <li>
+        <img src="./icons/Burgers1.png" alt=""></img>
+        <span data-lang-ru="Готовые наборы ➜" data-lang-cz="Hotové sady ➜"></span>
+        <span data-lang-ru="
+          Готовые наборы со скидкой. Вы можете подобрать набор на подходящий случай"
+          data-lang-cz="Hotové sady se slevou. Můžete si vybrat sadu pro vhodnou příležitost"></span>
+        <a href="#KitSection"></a>
+      </li>
+      <li>
+        <img src="./icons/Burgers2.png" alt=""></img>
+        <span data-lang-ru="Собрать свой набор ➜" data-lang-cz="Sestavit vlastní sadu ➜"></span>
+        <span data-lang-ru="Выбрать количество макарун и выбрать вкусы"
+          data-lang-cz="Vybrat počet makronek a zvolit příchutě"></span>
+        <a href="#KitSection"></a>
+      </li>
+      <li>
+        <img src="./icons/Paint.png" alt=""></img>
+        <span data-lang-ru="Набор с индивидуальной печатью ➜" data-lang-cz="Sada s individuálním potiskem ➜">
+        </span>
+        <span data-lang-ru="Собрать набор макарун с уникальным дизайном"
+          data-lang-cz="Sestavte si sadu makronek s jedinečným designem">
+        </span>
+        <a href="#KitSection"></a>
+      </li>
+      <li>
+        <img src="./icons/BigCake.png" alt=""></img>
+        <span data-lang-ru="Свадебные предложения ➜" data-lang-cz="Svatební nabídky ➜"></span>
+        <span data-lang-ru="Нежные пирожные макаруны с разными вкусами для украшения вашего свадебного торжества"
+          data-lang-cz="Jemné makronky s různými příchutěmi pro výzdobu vaší svatební oslavy">
+        </span>
+        <a href="#DatesSection"></a>
+      </li>
+      <li>
+        <img src="./icons/Present.png" alt=""></img>
+        <span data-lang-ru="Корпоративные подарки ➜" data-lang-cz="Firemní dárky ➜">Firemní dárky ➜</span>
+        <span data-lang-ru="От 85 Kč за шт. С уникальным дизайном. Приятный комплимент для коллег и партнеров"
+          data-lang-cz="Od 85 Kč za kus. S jedinečným designem. Příjemný kompliment pro kolegy a partnery">
+        </span>
+        <a href="#DatesSection"></a>
+      </li>
+      <li>
+        <img src="./icons/Cafe.png" alt=""></img>
+        <span data-lang-ru="Оптовые поставки ➜" data-lang-cz="Velkoobchodní dodávky ➜"></span>
+        <span data-lang-ru="Предложение для кофеен, кафе, отелей и т.д. Посмотрите условия сотрудничества и отзывы"
+          data-lang-cz="Nabídka pro kavárny, restaurace, hotely atd. Podívejte se na podmínky spolupráce a recenze">
+        </span>
+      </li>
+    </ul>
+
+    <section class="OnSale">
+      <div data-lang-ru="Акции" data-lang-cz="Akce" class="Name">
+      </div>
+      <ul class="List">
+        <li class="Card">
+          <img src="./images/Tasty.png" alt=""></img>
+          <span data-lang-ru="В районе Florenc – от 100KČ По Праге – от 150KČ"
+            data-lang-cz="V oblasti Florenc – od 100 Kč Po Praze – od 150 Kč">
+          </span>
+          <span data-lang-ru="БЕСПЛАТНАЯ ДОСТАВКА!" data-lang-cz="DOPRAVA ZDARMA!" class="Strip" id="FreeDel">
+          </span>
+        </li>
+        <li class="Card">
+          <img src="./images/Yummy.png" alt=""></img>
+          <span data-lang-ru="Аппетитные конфеты на основе миндального печенья и крема"
+            data-lang-cz="Lahodné bonbóny na bázi mandlových sušenek a krému">
+          </span>
+          <span data-lang-ru="НОВИНКА!" data-lang-cz="NOVINKA!" class="Strip">
+          </span>
+        </li>
+        <li class="Card">
+          <img src="./images/Sweet.png" alt=""></img>
+          <span data-lang-ru="Ароматный кофе с нежной макарункой" data-lang-cz="Voňavá káva s jemnou makronkou"></span>
+          <span data-lang-ru="НОВИНКА!" data-lang-cz="NOVINKA!" class="Strip"></span>
+        </li>
+        <li class="Card">
+          <img src="./images/Delicious.png" alt=""></img>
+          <span data-lang-ru="Шоколадное пирожное-картошка на основе бисквита"
+            data-lang-cz="Čokoládový dort-brambora na bázi piškotu"></span>
+          <span data-lang-ru="СЛАДКАЯ НОВИНКА!" data-lang-cz="SLADKÁ NOVINKA!" class="Strip">
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="Dates" id="DatesSection">
+      <span data-lang-ru="Ближайшие праздники" data-lang-cz="Nejbližší svátky" class="ListName"></span>
+      <ul>
+        <li>
+          <div class="Birthday">
+            <img src="icons/Macaron1.png" alt=""></img>
+            <img class="BirthCap" src="./images/BirthCap.png" alt="">
+          </div>
+          <span>
+            <span data-lang-ru="Скоро" data-lang-cz="Brzy"></span>
+            <br>
+            <span data-lang-ru="День рождения" data-lang-cz="narozeniny"></span>
+            <br>
+            <span data-lang-ru="близкого человека" data-lang-cz="blízké osoby"></span>
+          </span>
+        </li>
+        <li>
+          <img src="icons/Macaron2.png" alt=""></img>
+          <span>
+            <span data-lang-ru="1 июня" data-lang-cz="1 června"></span>
+            <br>
+            <span data-lang-ru="День защиты детей" data-lang-cz="Den dětí"></span>
+          </span>
+        </li>
+        <li>
+          <img src="icons/Macaron3.png" alt=""></img>
+          <span>
+            <span data-lang-ru="11 июля" data-lang-cz="11 července"></span>
+            <br>
+            <span data-lang-ru="День шоколада" data-lang-cz="Den čokolády"></span>
+          </span>
+        </li>
+        <li>
+          <img src="icons/Macaron1.png" alt=""></img>
+          <span>
+            <span data-lang-ru="" data-lang-cz=""></span>
+            <br>
+            <span data-lang-ru="20 июля" data-lang-cz="20 července"></span>
+            <br>
+            <span data-lang-ru="Международный день торта" data-lang-cz="Mezinárodní den dortu"></span>
+          </span>
+        </li>
+        <li>
+          <img src="icons/Macaron2.png" alt=""></img>
+          <span>
+            <span data-lang-ru="14 августа" data-lang-cz="14 srpna"></span>
+            <br>
+            <span data-lang-ru="Медовый спас" data-lang-cz="Medový spas"></span>
+          </span>
+        </li>
+      </ul>
+      <div class="Line"></div>
+      <div class="BorderRight"></div>
+    </section>
+
+    <section class="Kits" id="KitSection">
+      <span data-lang-ru="Популярные наборы" data-lang-cz="Populární sady" class="Name"></span>
+      <ul class="List">
+        <li class="Card">
+          <img class="MainImage" src="./images/Img1.png" alt="">
+          <div class="Text">
+            <span class="CardName">"Pineapple"</span>
+            <span class="CardText">
+              <span data-lang-ru="Набор из 22 " data-lang-cz="Sada z 22 ">
+              </span>
+              <span class="Pink" data-lang-ru="розовых" data-lang-cz="růžových"></span>
+              <span data-lang-ru="макарун, некоторые со вкусом ананаса!"
+                data-lang-cz="makronky, některé s chutí ananasu!"></span>
+
+            </span>
+            <ul class="CardBuy">
+              <li class="Price">800 KČ</li>
+              <li class="ToCart">
+                <img src="./icons/bag.svg" alt=""></img>
+                <span data-lang-ru="В корзину" data-lang-cz="Do košíku">В корзину</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="Card">
+          <img class="MainImage" src="./images/Img2.png" alt="">
+          <div class="Text">
+            <span data-lang-ru="Красота спасёт мир" data-lang-cz="Krása spasí svět" class="CardName">Красота спасёт
+              мир</span>
+            <span data-lang-ru="Набор 16 шт. Вкусы: клубника - базилик, кокос, голубой сыр, пармезан"
+              data-lang-cz="Sada 16 ks. Chuť: jahoda - bazalka, kokos, modrý sýr, parmezán" class="CardText">Набор 16
+              шт. Вкусы: клубника - базилик, кокос, голубой сыр, пармезан</span>
+            <ul class="CardBuy">
+              <li class="Price">400 KČ</li>
+              <li class="ToCart">
+                <img src="./icons/bag.svg" alt=""></img>
+                <span data-lang-ru="В корзину" data-lang-cz="Do košíku">В корзину</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="Card">
+          <img class="MainImage" src="./images/Img3.png" alt="">
+          <div class="Text">
+            <span data-lang-ru="Круглый набор" data-lang-cz="Kulatá sada" class="CardName">Круглый набор</span>
+            <span data-lang-ru="40 макаронс в круглой коробке с персональной надписью"
+              data-lang-cz="40 makaronů v kulaté krabičce s osobním nápisem" class="CardText">40 макаронс в круглой
+              коробке с персональной надписью</span>
+            <ul class="CardBuy">
+              <li class="Price">1560 KČ</li>
+              <li class="ToCart">
+                <img src="./icons/bag.svg" alt=""></img>
+                <span data-lang-ru="В корзину" data-lang-cz="Do košíku">В корзину</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <a data-lang-ru="Все наборы" data-lang-cz="Všechny sady" class="Button" href="">
+        Все наборы
+        <div class="MacaronBounce">
+          <img id="Top" src="./icons/MacaronTop.png" alt="">
+          <img id="Mid" src="./icons/MacaronMid.png" alt="">
+          <img id="Bottom" src="./icons/MacaronBottom.png" alt="">
+        </div>
+        <div class="MacaronsBounce">
+          <img src="./icons/MacaronsTop.png" id="Top1" alt="">
+          <img src="./icons/MacaronsMid.png" id="Mid1" alt="">
+          <img src="./icons/MacaronsBot2.png" id="Bot3" alt="">
+          <img id="Bot2" src="./icons/MacaronsBot.png" alt="">
+        </div>
+      </a>
+    </section>
+
+    <section class="News">
+      <div class="Name" data-lang-ru="Новости" data-lang-cz="Novinky">Новости</div>
+      <ul class="List">
+        <li class="Card">
+          <img class="MainImage" src="./images/Photo1.png" alt="">
+          <div class="CardInfo">
+            <span class="Date">23.5.2024</span>
+            <span class="NameCard" data-lang-ru="Скоро главный праздник лета!"
+              data-lang-cz="Brzy hlavní letní svátek!"></span>
+            <span class="TextCard"
+              data-lang-ru="Все любят, когда вкусно, красиво и натурально. Смотрите больше наборов с десертами ручной работы"
+              data-lang-cz="Každý má rád, když je něco chutné, krásné a přirozené. Podívejte se na další sady s ručně vyráběnými dezerty"></span>
+          </div>
+        </li>
+        <li class="Card">
+          <img class="MainImage" src="./images/Photo2.png" alt="">
+          <div class="CardInfo">
+            <span class="Date">15.5.2024</span>
+            <span class="NameCard" data-lang-ru="Экспресс-конкурс ко дню Святого Валентина"
+              data-lang-cz="Expresní soutěž k Valentýnu"></span>
+            <span class="TextCard"
+              data-lang-ru="Подарок уже через 2 дня. День всех влюблённых не за горами. Расскажи о своих чувствах с помощью сладкой валентинки от МакаронШоп"
+              data-lang-cz="Dárek už za 2 dny. Den svatého Valentýna je za rohem. Vyjádři své city sladkou valentýnskou kartičkou od MacaronShop"></span>
+          </div>
+        </li>
+        <li class="Card">
+          <img class="MainImage" src="./images/HeinzMacrons.png" alt="">
+          <div class="CardInfo">
+            <span class="Date">12.2.2024</span>
+            <span class="NameCard" data-lang-ru="Heinz выпустила макаруны со вкусом кетчупа"
+              data-lang-cz="Heinz uvedl makronky s příchutí kečupu"></span>
+            <span class="TextCard"
+              data-lang-ru="Производитель томатного кетчупа Heinz выпустил лимитированную серию макарун со вкусом своего главного продукта."
+              data-lang-cz="Výrobce kečupu Heinz uvedl limitovanou edici makronek s příchutí svého hlavního produktu."></span>
+          </div>
+        </li>
+      </ul>
+      <div class="OutButton">
+        <a class="Button" href="">
+          <span data-lang-ru="Все новости" data-lang-cz="Všechny novinky"></span>
+          <div class="Icons">
+            <img id="News1" src="./icons/NewsPaper.png" alt="">
+            <img id="News2" src="./icons/News2.png" alt="">
+            <img id="CupTop" src="./icons/CoffeCup Top.png" alt="">
+            <img id="CupBot" src="./icons/CoffeCup Bot.png" alt="">
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="Maps">
+      <a href="#popupMap" class="ButtonMaps">
+        <img id="point" src="./icons/pointer.png" alt="">
+        <img id="map" src="./icons/Map.svg" alt="">
+        <span data-lang-ru="Наш адрес: Dlouhá 924/3" data-lang-cz="Naše adresa: Dlouhá 924/3"></span>
+      </a>
+      <div id="popupMap" class="popupMap">
+        <a class="popupArea" href="#footer">
+          <div class="popupMapBody">
+            <div class="popupMapContent">
+              <iframe class="mapFrame"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d998.2772707679659!2d14.420983944108103!3d50.088978378858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e9a1ec8189%3A0xf081bc02f575981d!2zRGxvdWjDoSA5MjQvMywgMTEwIDAwIFN0YXLDqSBNxJtzdG8!5e1!3m2!1sru!2scz!4v1717600558919!5m2!1sru!2scz"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <a href="#footer" class="popupClose">X</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/HeaderFooter.js"></script>
+  <script src="/languageSwitch.js"></script>
+</body>
+
 </html>

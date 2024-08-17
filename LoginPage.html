@@ -4,204 +4,82 @@
     <link rel="stylesheet" href="./Login Page/styles/style.min.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
+    <title data-lang-ru="Страница входа" data-lang-cz="Přihlašovací stránka">Login Page</title>
     <link rel="icon" href="./icons/FavIcon.png" type="image/x-icon">
+    <script src="./languageSwitch.js" defer async></script>
   </head>
   <body>
-    <header>
-    <section class="PCheader">
-
-        <div class="Upper">
-          <ul class="ButtonBar">
-          <li>Гарантия свежести</li>
-          <li>Доставка и оплата</li>
-          <li>Оптовые поставки</li>
-          <li>Контакты</li>
-        </ul>
-        <ul class="Store">
-          <li>
-            <img class="Icon" src="./icons/place.svg" alt="place" />
-            <span>Прага</span>
-            <img id="vect" src="./icons/Vector.svg" alt="vector" />
-          </li>
-          <li>
-            <img class="Icon" src="./icons/phone.svg" alt="phone" />
-            <span>+420 576 636 124</span>
-          </li>
-        </ul>
-          <a id="StoreBasket" href="">
-            <img class="Icon" src="./icons/bag.svg" alt="bag" />
-            <span>Корзина</span>
-            <div class="ItemsIn">3</div>
-          </a>
-        </div>
-        
-        <div class="Lower">
-          <ul class="LeftList">
-            <li>
-              СЛАДКИЕ ДНИ
-              <span class="sale">%</span>
-            </li>
-            <li>
-              подарочные наборы
-              <img src="./icons/Vector.svg" alt="vector" />
-            </li>
-            <li>Собрать набор</li>
-          </ul>
-          
-          <div class="MainLogo">
-          <a href="./HomePage.html">
-              <img src="./icons/LogoMain.svg" alt="" />
-            </a>
-        </div>
-
-        <ul class="RightList">
-          <li>Создать дизайн</li>
-          <li>
-            КОМПАНИЯМ
-            <img src="./icons/Vector.svg" alt="vector" />
-          </li>
-          <li>
-            ВЕСЬ КАТАЛОГ
-            <img src="./icons/Vector.svg" alt="vector" />
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="MobHeader">
-      <a href="" class="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-      <a class="Logo" href="./HomePage.html">
-        <img src="./icons/LogoMob.png" alt="">
-      </a>
-      <a href="" class="Basket">
-        <img src="./icons/bag.svg" alt="">
-        <div class="Count">3</div>
-      </a>
-    </section>
-    </header>
+    <div id="header-placeholder"></div>
     
     <main>
       <div class="MainIcons">
         <a href="">
-          <img src="./icons/Profile.png" alt="">
+          <img src="./icons/Profile.png" alt="" data-lang-ru="Профиль" data-lang-cz="Profil">
         </a>
         <a href="">
-          <img src="./icons/bag.svg" alt="">
+          <img src="./icons/bag.svg" alt="" data-lang-ru="Корзина" data-lang-cz="Košík">
         </a>
         <a href="">
-          <img src="./icons/heart.png" alt="">
+          <img src="./icons/heart.png" alt="" data-lang-ru="Избранное" data-lang-cz="Oblíbené">
         </a>
+        <div id="languageSwitch" onclick="switchLanguage()" id="languageSwitch" href="#">
+          <img src="./icons/language.png" alt="">
+        </div>
       </div>
       <section class="LoginSection">
-        <img class="MainImg" src="./images/TopImg.png" alt="">
+        <img class="MainImg" src="./images/TopImg.png" alt="" data-lang-ru="Изображение" data-lang-cz="Obrázek">
         <div class="Login">
-          <div class="MainName">
+          <div class="MainName" data-lang-ru="Вход" data-lang-cz="Přihlášení">
             Вход
           </div>
           <ul class="FormsList">
               <li>
-                <span class="FormName">
+                <span class="FormName" data-lang-ru="E-mail" data-lang-cz="E-mail">
                   E-mail
                 </span>
                 <form>
                   <input 
                   required
-                  type="text" placeholder="Ваш email">
+                  type="text" placeholder="Ваш email"
+                  data-lang-ru="Ваш email" 
+                  data-lang-cz="Váš e-mail">
                 </form>
               </li>
               <li>
-                <span class="FormName">
+                <span class="FormName" data-lang-ru="Пароль" data-lang-cz="Heslo">
                   Пароль
                 </span>
                 <form>
-                  <input minlength="8" required type="password" placeholder="Ваш пароль">
+                  <input minlength="8" required type="password" placeholder="Ваш пароль"
+                  data-lang-ru="Ваш пароль" 
+                  data-lang-cz="Vaše heslo">
                 </form>
             </li>
           </ul>
           <a href="">
-            <div class="LogInSubmit"
-            inputmode="submit">
+            <div class="LogInSubmit" inputmode="submit" data-lang-ru="Вход" data-lang-cz="Přihlásit se">
               Вход
             </div>
           </a>
         </div>
         <div class="Text">
-          Еще не зарегистрированы?
+          <span
+          data-lang-ru="Еще не зарегистрированы?"
+          data-lang-cz="Ještě nejste zaregistrováni?">
+            Еще не зарегистрированы?
+          </span>
           <a href="./RegPage.html" class="RegButton">
-            Зарегистрироваться
+            <span
+            data-lang-ru="Зарегистрироваться"
+            data-lang-cz="Zaregistrovat se">
+              Зарегистрироваться
+            </span>
           </a>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="FirstBlock">
-        <ul>
-          <li>
-            <img src="./icons/MacaronHeart.svg" alt=""></img>
-            <span>
-              Готовим вручную и <br> с любовью
-            </span>
-          </li>
-          <li>
-            <img src="./icons/Car.svg" alt=""></img>
-            <span>
-              Доставим <br>в день заказа
-            </span>
-          </li>
-          <li>
-            <img src="./icons/Seeds.svg" alt=""></img>
-            <span>
-              100% <br>миндальная мука <br>и натуральные ингредиенты
-            </span>
-          </li>
-        </ul>
-        <span class="SROInfo">
-          	&#169; 2021 Макароншоп<br>ООО "Квантум", Прага,  Улица Длоуга, дом 3
-        </span>
-      </div>
-
-      <ul class="InfoBlock">
-        <li>
-          <span class="Name">Информация</span>
-          <span>О компании</span>
-          <span>Гарантии вкуса и свежести</span>
-          <span>Доставка и оплата</span>
-          <span>Контакты</span>
-        </li>
-        <li>
-          <span class="Name">Каталог</span>
-          <span>Каталог десертов</span>
-          <span>Готовые наборы</span>
-          <span>Собрать свой набор</span>
-          <span>Акции</span>
-        </li>
-        <li>
-          <span class="Name">ДЛЯ БИЗНЕСА</span>
-          <span>Корпоративные подарки</span>
-          <span>Для юридических лиц</span>
-          <span>Оптовикам</span>
-        </li>
-        <li>
-          <span class="Name">+420 576 636 124</span>
-          <span>с 9:00 до 21:00</span>
-          <div class="Social">
-            <a target="_blank" href="https://www.instagram.com/">
-              <img src="./icons/InstagramW.svg" alt="">
-            </a>
-            <a target="_blank" href="https://www.facebook.com/">
-              <img src="./icons/FacebookW.svg" alt="">
-            </a>
-            <a target="_blank" href="https://vk.com/">
-              <img src="./icons/WKw.svg" alt="">
-            </a>
-          </div>
-        </li>
-      </ul>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script src="/HeaderFooter.js"></script>
   </body>
 </html>
